@@ -1,6 +1,7 @@
 #include<time.h>
 #include<stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void code()
 {
@@ -14,7 +15,6 @@ void code()
 int main()
 {
     double sum = 0;
-    //double sum1 = 0;
     int n;
     char fileName [50];
     double *ptr;
@@ -24,10 +24,10 @@ int main()
     printf("Enter number of elements: ");
     scanf_s("%d", &n);
     printf("Enter file name: ");
-    scanf_s("%s", &fileName);
+    scanf("%s", fileName);
+    strcat(fileName, ".csv");
     fpt = fopen(fileName, "w+");
     fprintf(fpt,"Running time:\n");
-
 
 
 
@@ -56,7 +56,6 @@ int main()
     }
     fprintf(fpt,"\n\n Elapsed Average: %f seconds: ",sum/n);
     //printf(" Elapsed Average: %f seconds \n",sum/n);
-    //printf(" Elapsed Average: %f seconds \n",sum1/n);
     free(ptr);
     fclose(fpt);
     return 0;

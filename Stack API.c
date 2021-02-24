@@ -8,10 +8,47 @@ struct stack
     int top;
 };
 
+void push(struct stack *s, int item);
+int *pop(struct stack *s);
+void init_stack(struct stack *s);
+
 int main(void)
 {
     struct stack s;
-    init
+    init_stack(&s);
+
+    push(&s, 11);
+    push(&s, 12);
+    push(&s, 13);
+    push(&s, 14);
+    push(&s, 15);
+    push(&s, 16);
+    push(&s, 17);
+
+    int *i = NULL;
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+    i = pop(&s);
+    if(i) { printf (" Item popped : %d\n", * i); }
+
+
 }
 
 void init_stack(struct stack *s)
